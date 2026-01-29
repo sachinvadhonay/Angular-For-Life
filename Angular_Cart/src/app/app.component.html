@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo">E-commerce App</span>
+  
+     <i
+      class="fa fa-home home-icon"
+      title="Home"
+      (click)="goHome()">
+    </i>
+  </div>
+
+ 
+
+  <!-- <div class="nav-links">
+    <a href="#">Dashboard</a>
+    <a href="#">Team</a>
+    <a href="#">Projects</a>
+  </div> -->
+
+  <div class="nav-right" *ngIf="isLoggedIn">
+    <span class="user-name">
+      👤 {{ userName }}
+    </span>
+
+  <i
+  class="fa fa-sign-out logout-icon"
+  title="Logout"
+  (click)="logout()">
+</i>
+
+  </div>
+  
+ <div class="nav-right">
+  <i class="fa fa-shopping-cart cart-icon" (click)="goToCart()"></i>
+
+  <span class="cart-badge" *ngIf="cartCount > 0">
+    {{ cartCount }}
+  </span>
+</div>
+</nav>
+<router-outlet />

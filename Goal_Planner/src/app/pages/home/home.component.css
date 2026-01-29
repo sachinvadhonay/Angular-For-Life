@@ -1,0 +1,134 @@
+.home-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6f7fb;
+}
+
+/* HERO */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 90px;
+  background: linear-gradient(135deg, #6f4cc3, #8a6ad8);
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 55%;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.hero-content span {
+  color: #ffd54f;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: #ffffff;
+  color: #6f4cc3;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 320px;
+}
+
+/* WHY */
+.why-section {
+  padding: 70px 90px;
+  text-align: center;
+}
+
+.why-section h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.why-text {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.why-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px;
+  width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.why-card h4 {
+  margin: 14px 0;
+}
+
+/* FEATURES */
+.features-section {
+  padding: 70px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.features-text {
+  max-width: 50%;
+}
+
+.features-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-text li {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.features-image img {
+  width: 280px;
+}
+
+/* TRUST */
+.trust-section {
+  padding: 60px 90px;
+  text-align: center;
+  background: #f0eef9;
+}
+
+.trust-section h2 {
+  margin-bottom: 10px;
+}

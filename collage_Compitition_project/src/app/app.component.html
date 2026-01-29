@@ -1,0 +1,58 @@
+<nav class="navbar">
+   <span class="logo">🚀 TechNova</span>
+@if(userservice.loggedUserId =='')
+{
+
+
+<div class="navbar-right">
+    <button routerLink="/login" class="btn login-btn">Login</button>
+    <button routerLink="/register" class="btn register-btn">Register</button>
+    </div>
+
+}
+@else
+{
+
+   <div class="navbar-left">
+  
+    <ul class="nav-links">
+      <li><a href="/home">Home</a></li>
+    @if (userservice.loggedUserData?.role === 'admin') 
+    {
+      <li><a routerLink="/competition">Competitions</a></li>
+    }
+      <li><a href="/winners">Past Winners</a></li>
+      <li><a routerLink="/about">About</a></li>
+    </ul>
+  </div>
+
+  <div class="user-dropdown">
+  <button class="user-btn">
+    <span class="user-icon">👤</span>
+    <span class="username">{{userservice.loggedUserData?.fullName}}</span>
+    <span class="arrow">▾</span>
+  </button>
+
+  <div class="dropdown-menu">
+    <a href="#">
+      <span class="icon">📊</span> Dashboard
+    </a>
+    <a href="#">
+      <span class="icon">👤</span> My Profile
+    </a>
+    <a href="#">
+      <span class="icon">📁</span> My Projects
+    </a>
+    <hr>
+    <a  (click)="onLogoff()" class="logout">
+      <span class="icon">🚪</span> Logout
+    </a>
+  </div>
+
+
+  </div>
+}
+  
+  
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+.hero-section {
+  height: 90vh;
+  background: linear-gradient(120deg, #0d6efd, #6610f2);
+}
+
+.cta-section {
+  background: linear-gradient(120deg, #6610f2, #0d6efd);
+}
+.hero-section {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(13,110,253,0.8), rgba(102,16,242,0.8)),
+    url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b");
+  background-size: cover;
+  background-position: center;
+}

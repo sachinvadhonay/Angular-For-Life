@@ -1,0 +1,25 @@
+.btn-purple {
+  background-color: #6f4cc3;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 14px;
+}
+
+.btn-purple:hover {
+  background-color: #5d3fb3;
+  color: #fff;
+}
+.task-modal-header {
+  background-color: #6f4cc3;
+}
+
+.btn-purple {
+  background-color: #6f4cc3;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.btn-purple:hover {
+  background-color: #5d3fb3;
+  color: #fff;
+}

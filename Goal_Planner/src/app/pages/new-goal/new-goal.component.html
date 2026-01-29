@@ -1,0 +1,96 @@
+<div class="goal-form-container">
+  <div class="goal-form-card">
+
+    <form [formGroup]="goalForm">
+
+      <div class="goal-grid">
+
+        <!-- LEFT -->
+        <div class="left-section">
+
+          <!-- Goal Title -->
+          <div class="form-group">
+            <label>Goal Title</label>
+            <input
+              type="text" formControlName="goalName" placeholder="Enter goal title"
+            />
+          </div>
+ 
+          <!-- Dates Row -->
+          <div class="date-row">
+            <div class="form-group">
+              <label>Start Date</label>
+              <input type="date" formControlName="startDate" />
+            </div>
+
+            <div class="form-group">
+              <label>Target Date</label>
+              <input type="date" formControlName="endDate" />
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label>Description</label>
+            <textarea
+              rows="4"
+              formControlName="description"
+              placeholder="Enter goal description"
+            ></textarea>
+               
+          </div>
+
+        </div>
+       
+      <div class="col-12" formArrayName="milestones">
+
+  @for (item of milestoneList.controls; track $index) {
+
+    <div class="right-section" [formGroupName]="$index">
+
+      <div class="date-row">
+        <div class="form-group">
+          <label>Milestone Name</label>
+          <input
+            type="text"
+            formControlName="milestoneName"
+            placeholder="Enter milestone"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Target Date</label>
+          <input
+            type="date"
+            formControlName="targetDate"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea
+          rows="3"
+          formControlName="description"
+          placeholder="Enter description"
+        ></textarea>
+       
+      </div>
+
+    </div>
+
+  }
+ <button type="button" class="add-btn mt-3" (click)="createNewMilestoneForm()">+</button>
+</div>
+
+      <!-- BUTTON -->
+      <div class="button-row">
+        <button type="button" class="create-goal-btn" (click)="onSaveGoal()">
+          Create Goal
+        </button>
+      </div>
+</div>
+    </form>
+
+  </div>
+</div>

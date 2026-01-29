@@ -1,0 +1,96 @@
+.about-wrapper {
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.about-hero {
+  background: linear-gradient(120deg, #0d6efd, #6610f2);
+  color: #fff;
+  padding: 70px 20px;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.about-hero p {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px 20px;
+}
+
+.section h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.bg-light {
+  background: #f6f8fb;
+}
+
+/* LISTS */
+.points {
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.points li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.feature-card h4 {
+  margin-bottom: 8px;
+}
+
+/* STEPS */
+.steps {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* FOOTER NOTE */
+.footer-note {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+}

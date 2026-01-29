@@ -1,0 +1,28 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Sign Up</h2>
+
+    <input
+      type="text"
+      placeholder="Name"
+      [(ngModel)]="customer.Name" />
+
+    <input
+      type="text"
+      placeholder="Mobile No"
+      [(ngModel)]="customer.MobileNo" />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="customer.Password" />
+
+    <button (click)="signup()">Sign Up</button>
+
+    <p class="switch-link">
+      Already have an account?
+       <div class="nav-links"> <a href="/login">Login</a></div>
+     
+  </div>
+</div>
+

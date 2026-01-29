@@ -1,0 +1,34 @@
+<div class="checkout-wrapper">
+  <div class="checkout-card">
+    <h2 class="title">Checkout</h2>
+
+    <div class="form-group">
+      <input type="text" placeholder="Address Line 1" [(ngModel)]="order.DeliveryAddress1">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Address Line 2" [(ngModel)]="order.DeliveryAddress2">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="City" [(ngModel)]="order.DeliveryCity">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Pin Code" [(ngModel)]="order.DeliveryPinCode">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Landmark" [(ngModel)]="order.DeliveryLandMark">
+    </div>
+
+    <div class="total-box">
+      <span>Total Amount</span>
+      <strong>₹ {{ totalAmount }}</strong>
+    </div>
+
+    <button class="place-order-btn" (click)="placeOrder()">
+      🛒 Place Order
+    </button>
+  </div>
+</div>

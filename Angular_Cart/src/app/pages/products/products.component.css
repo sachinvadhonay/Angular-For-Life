@@ -1,0 +1,126 @@
+/* Container spacing */
+.container {
+  margin-top: 25px;
+}
+
+/* Card layout */
+.product-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.product-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  background-color: #f5f5f5;
+}
+
+/* Category badge */
+.category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #5a5af1;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Card body */
+.card-body {
+  padding: 16px;
+  text-align: center;
+}
+
+/* Product title */
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* Price */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+/* Add to cart button */
+.add-to-cart-btn {
+  width: 100%;
+  background: #5a5af1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #4343d6;
+  color: #fff;
+}
+
+/* Category panel */
+.category-panel {
+  padding: 10px;
+}
+
+/* Title */
+.category-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0d6efd;
+}
+
+/* Category button */
+.category-btn {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, #6ec6ff, #4dabf7);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover effect */
+.category-btn:hover {
+  background: linear-gradient(135deg, #4dabf7, #339af0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Active (click) effect */
+.category-btn:active {
+  transform: scale(0.97);
+}

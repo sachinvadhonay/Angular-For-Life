@@ -1,0 +1,91 @@
+<div class="admin-page">
+
+  <!-- HEADER -->
+  <div class="admin-header">
+    <h2>Admin – Notes Management</h2>
+  </div>
+
+  <!-- ADD NOTE CARD -->
+  <div class="card add-note-card">
+    <h4>Add New Note</h4>
+
+    <form (ngSubmit)="addNote()">
+
+      <div class="form-grid">
+        <input
+          type="text"
+          placeholder="Note Title"
+          [(ngModel)]="noteForm.notesname"
+          name="notesname"
+          required />
+
+        <input
+          type="text"
+          placeholder="Weekday"
+          [(ngModel)]="noteForm.weekdays"
+          name="weekdays"
+          required />
+
+        <input
+          type="date"
+          [(ngModel)]="noteForm.dtDate"
+          name="dtDate"
+          required />
+      </div>
+
+      <textarea
+        placeholder="Description"
+        [(ngModel)]="noteForm.description"
+        name="description"
+        rows="3"
+        required></textarea>
+
+      <input type="file" (change)="onFileChange($event)" />
+
+      <button class="btn-primary" type="submit">
+        ➕ Add Note
+      </button>
+    </form>
+  </div>
+
+  <!-- NOTES TABLE -->
+  <div class="card notes-table-card">
+    <h4>Existing Notes</h4>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Weekday</th>
+          <th>Date</th>
+          <th>Document</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let note of notes">
+          <td>{{ note.notesname }}</td>
+          <td>{{ note.weekdays }}</td>
+          <td>{{ note.dtDate | date }}</td>
+          <td>
+            <button
+              class="btn-link"
+              (click)="download(note.documents)">
+              Download
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn-danger"
+              (click)="deleteNote(note.notesid)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

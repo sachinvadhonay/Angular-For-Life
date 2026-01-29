@@ -1,0 +1,70 @@
+.submit-wrapper {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 14px;
+  padding: 22px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.details-card .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.details-card .description {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.form-card label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  height: 44px;
+  border-radius: 8px;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+button {
+  height: 46px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.instruction-card {
+  background: linear-gradient(120deg, #ffffff, #f8f9ff);
+}
+
+.requirements {
+  padding-left: 18px;
+}
+
+.requirements li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.note {
+  background: #eef3ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-top: 15px;
+}

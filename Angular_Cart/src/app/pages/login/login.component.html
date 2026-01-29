@@ -1,0 +1,21 @@
+ <div class="auth-container">
+  <div class="auth-card">
+    <h2>Login</h2>
+
+    <input
+      type="text"
+      placeholder="Username"
+      [(ngModel)]="loginData.UserName" />
+
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="loginData.UserPassword" />
+
+    <button (click)="login()">Login</button>
+
+    <p class="switch-link">
+      New user?
+       <div class="nav-links"> <a href="/signup">SignUp</a></div>
+  </div>
+</div>

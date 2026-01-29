@@ -1,0 +1,26 @@
+<div class="notes-page">
+  <h2 class="page-title">Available Notes</h2>
+
+  <div class="notes-grid">
+    <div class="note-card" *ngFor="let note of notes">
+
+      <h3 class="note-title">{{ note.notesname }}</h3>
+
+      <p class="note-desc">
+        {{ note.description }}
+      </p>
+
+      <div class="note-meta">
+        <span>{{ note.weekdays }}</span>
+        <span>{{ note.dtDate | date:'mediumDate' }}</span>
+      </div>
+
+      <button
+            class="btn btn-sm btn-primary"
+            (click)="download(note.documents)">
+            Download
+          </button>
+
+    </div>
+  </div>
+</div>

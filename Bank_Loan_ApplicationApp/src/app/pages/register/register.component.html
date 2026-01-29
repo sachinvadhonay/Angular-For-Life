@@ -1,0 +1,28 @@
+ <div class="register-page">
+  <div class="register-card">
+
+    <!-- Left Panel (Form) -->
+    <div class="left-panel">
+      <h2>Registration</h2>
+
+      <form>
+        <input type="text" [(ngModel)]="registerObj.userName"  placeholder="Username" />
+        <input type="email" [(ngModel)]="registerObj.emailId" placeholder="Email" />
+         <input type="text" [(ngModel)]="registerObj.fullName" placeholder="FullName" />
+        <input type="password" [(ngModel)]="registerObj.password" placeholder="Password" />
+
+        <button type="button" class="register-btn"  (click)="onRegister()">Register</button>
+         
+      </form>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <h2>Welcome Back!</h2>
+      <p>Already have an account?</p>
+      <button class="outline-btn" routerLink="/login">Login</button>
+    </div>
+
+  </div>
+</div>
+

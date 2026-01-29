@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <span class="logo">📘 Notes App</span>
+  </div>
+
+  <div class="nav-center">
+    <span *ngIf="role === 'Admin'" class="role admin">Admin Panel</span>
+    <span *ngIf="role === 'User'" class="role user">User View</span>
+  </div>
+
+  <div class="nav-right">
+    <span class="username">👤 {{ username }}</span>
+    <button class="logout-btn" (click)="Logout()">Logout</button>
+  </div>
+</nav>
+

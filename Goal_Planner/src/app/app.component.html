@@ -1,0 +1,125 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <span class="logo-icon">✔✔</span>
+    <span class="logo-text"  routerLink="home">TaskMaster Pro</span>
+  </div>
+  
+      <ul class="navbar-center">
+    <li class="active" routerLink="home">Home</li>
+      </ul>
+  
+    
+@if (loggedUserData){
+  <ul class="navbar-center">
+    <li class="active" routerLink="dashboard">Dashboard</li>
+    <li routerLink="tasks">Tasks</li>
+    <li routerLink="goals">Goals</li>
+    <li routerLink="remainders">Reminders</li>
+  </ul>
+}
+@if (loggedUserData) {
+  <button class="btn btn-outline-light me-2">
+    👤{{loggedUserData.fullName }}
+  </button>
+
+  <button class="login-btn"  (click)="onLogOff()">
+    🚪LoggOff
+  </button>
+}@else { 
+  <div class="navbar-right">
+    <button class="login-btn" (click)="openModel()">
+      <span class="user-icon">👤</span>
+      Login
+    </button>
+  </div>
+}
+ 
+</nav>
+<router-outlet></router-outlet>
+
+
+<div
+  class="modal" #Loginmodel
+  id="loginModal"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content login-card">
+
+      <!-- Close -->
+      <button
+        type="button"
+        class="btn-close close-btn" (click)="closeModel()"
+        data-bs-dismiss="modal"
+      ></button>
+
+      @if(isLoginFormVisible())
+      {
+  <div class="modal-body">
+          <h4 class="title">Welcome Back!</h4>
+
+          <input
+            type="email" [(ngModel)]="logginObj.emailId"
+            class="form-control mb-3"
+            placeholder="Email"
+          />
+
+          <input
+            type="password" [(ngModel)]="logginObj.password"
+            class="form-control mb-3"
+            placeholder="Password"
+          />
+
+          <button class="btn login-btn w-100" (click)="onLogin()">
+            Login
+          </button>
+
+          <p class="signup-text mt-3">
+            Don’t have an account?
+            <a (click)="toggleForm()" >Sign Up</a>
+          </p>
+        </div>
+      }@else {
+        <div class="modal-body">
+          <h4 class="title">Create Account</h4>
+
+          <input
+            type="text" [(ngModel)]="registerObj.fullName"
+            class="form-control mb-2"
+            placeholder="Full Name"
+          />
+
+          <input
+            type="email" [(ngModel)]="registerObj.emailId"
+            class="form-control mb-2"
+            placeholder="Email"
+          />
+
+          <input
+            type="password" [(ngModel)]="registerObj.password"
+            class="form-control mb-2"
+            placeholder="Password"
+          />
+
+          <input
+            type="text" [(ngModel)]="registerObj.mobileNo"
+            class="form-control mb-3"
+            placeholder="Phone Number"
+          />
+
+          <button class="btn login-btn w-100" (click)="onRegister()">
+            Sign Up
+          </button>
+
+          <p class="signup-text mt-3">
+            Already have an account?
+            <a  (click)="toggleForm()">Login</a>
+          </p>
+        </div>
+      }
+      
+
+    </div>
+  </div>
+</div>

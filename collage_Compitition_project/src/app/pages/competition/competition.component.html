@@ -1,0 +1,98 @@
+<div class="page-wrapper">
+
+  <!-- PAGE TITLE -->
+  <div class="page-header">
+    <h2>Competition Management</h2>
+    <p>Manage college project competitions</p>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="card form-card">
+    <h5 class="card-title">Create / Update Competition</h5>
+
+    <form>
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <label>Competition Title</label>
+          <input type="text"[(ngModel)]="newObj.title" name="title" class="form-control" placeholder="Enter competition title">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Status</label>
+          <select class="form-select" [(ngModel)]="newObj.status" name="status">
+            <option>Select status</option>
+            <option>Upcoming</option>
+            <option>Ongoing</option>
+            <option>Completed</option>
+          </select>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label>Description</label>
+          <textarea class="form-control" rows="3" [(ngModel)]="newObj.description" name="description"
+            placeholder="Enter competition description"></textarea>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>Start Date</label>
+          <input type="datetime-local" [(ngModel)]="newObj.startDate" name="startDate" class="form-control">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label>End Date</label>
+          <input type="datetime-local"  [(ngModel)]="newObj.endDate" name="endDate" class="form-control">
+        </div>
+
+      </div>
+
+      <div class="text-end mt-3">
+        <button type="button" class="btn btn-secondary me-2" >Clear</button>
+        <button type="submit" class="btn btn-primary" (click)="onSave()">Save Competition</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- TABLE CARD -->
+  <div class="card table-card mt-4">
+    <h5 class="card-title">Competition List</h5>
+
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for(item of gridList; track $index)
+            {
+                <tr>
+            <td>{{$index+1}}</td>
+            <td>{{item.title}}</td>
+            <td>
+              {{item.status}}
+            </td>
+            <td> {{item.startDate | date:'dd-MM-yyyy'}}</td>
+            <td>{{item.endDate | date:'dd-MM-yyyy'}}</td>
+            <!-- <td class="text-center">
+              <button class="btn btn-sm btn-outline-primary me-1">Edit</button>
+              <button class="btn btn-sm btn-outline-danger">Delete</button>
+            </td> -->
+          </tr>
+            }
+          
+
+           
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+

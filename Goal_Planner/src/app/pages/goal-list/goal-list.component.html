@@ -1,0 +1,39 @@
+<div class="goals-container">
+
+  <div class="header">
+    <h2>Goals</h2>
+    <button class="btn-primary" (click)="navigateToNewgoal()">+ New Goal</button>
+  </div>
+<div class="row">
+  @for (item of goalList  ; track $index) {
+    <div class="goal-card">
+    <h3 class="goal-title">{{item.goalName}}</h3>
+
+    <!-- Progress -->
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 60%;">60%</div>
+    </div>
+
+    <!-- Milestones -->
+    <div class="milestones">
+      <h4>Milestones:</h4>
+
+      <div class="milestone">
+        <span>StartDate</span>
+        <span class="status completed">{{item.startDate | date:'dd-MMM-yy' }}</span>
+      </div>
+
+      <div class="milestone">
+        <span>EndDate</span>
+        <span class="status progress">{{item.endDate | date:'dd-MMM-yy'}}</span>
+      </div>
+
+      <div class="milestone">
+        <span>Description</span>
+        <span class="status pending">{{item.description}}</span>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+</div>
